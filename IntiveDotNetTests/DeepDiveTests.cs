@@ -18,17 +18,10 @@ namespace IntiveDotNet.Tests
         [TestMethod]
         public void PathCreationTest()
         {
-            try
-            {
-                DeepDive dd = new DeepDive();
-                dd.Create(3);
+            DeepDive dd = new DeepDive();
+            dd.Create(3);
 
-                Assert.IsTrue(Directory.Exists($"{dd.MainPath}\\ dd.FullPath"));
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
+            Assert.IsTrue(Directory.Exists($"{dd.FullPath}"));
         }
     }
 }

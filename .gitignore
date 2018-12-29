@@ -6,6 +6,9 @@ packages/
 *.sln
 *.config
 
+# Test results
+TestResults/
+
 # User-specific files
 *.rsuser
 *.suo
