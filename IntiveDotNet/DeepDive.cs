@@ -8,7 +8,6 @@ namespace IntiveDotNet
     public class DeepDive
     {
         private IEnumerable<Guid> _currentPathGuids;
-        private string _fullPath;
 
         #region Public fields
 
@@ -20,7 +19,7 @@ namespace IntiveDotNet
         /// <summary>
         /// Returns full path of current directory tree.
         /// </summary>
-        public string FullPath => _fullPath;
+        public string FullPath { get; private set; }
 
         /// <summary>
         /// Gets current level of directory tree.
@@ -42,11 +41,11 @@ namespace IntiveDotNet
             _currentPathGuids = GenerateGuids(level);
             CurrentLevel = level;
 
-            _fullPath = Path.Combine(MainPath, String.Join("\\", _currentPathGuids));
+            FullPath = Path.Combine(MainPath, String.Join("\\", _currentPathGuids));
 
             try
             {
-                Directory.CreateDirectory(_fullPath);
+                Directory.CreateDirectory(FullPath);
             }
             catch (UnauthorizedAccessException)
             {
