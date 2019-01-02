@@ -1,11 +1,3 @@
-# Packages
-packages/
-
-# CSharp project/solution/config
-*.csproj
-*.sln
-*.config
-
 # Test results
 TestResults/
 
