@@ -41,7 +41,7 @@ namespace IntiveDotNet
             _currentPathGuids = GenerateGuids(level);
             CurrentLevel = level;
 
-            FullPath = Path.Combine(MainPath, String.Join("\\", _currentPathGuids));
+            FullPath = Path.Combine(MainPath, String.Join(Path.DirectorySeparatorChar.ToString(), _currentPathGuids));
 
             try
             {

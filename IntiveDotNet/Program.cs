@@ -71,7 +71,7 @@ namespace IntiveDotNet
                         try
                         {
                             deepDive.Create((ushort) Int16.Parse(Console.ReadLine() ?? "10000"));
-                            Console.WriteLine("Directories created! You can use DrownItDown now.");
+                            WriteColoredText("Directories created! You can use DrownItDown now.", ConsoleColor.Green);
                         }
                         catch (ArgumentException exception)
                         {
@@ -83,7 +83,7 @@ namespace IntiveDotNet
                         Console.Clear();
 
                         Console.Write("3. DrownItDown\nType level in which file should be created: ");
-                        ushort level = (ushort) Int16.Parse(Console.ReadLine() ?? "10000");
+                        ushort level = ushort.Parse(Console.ReadLine() ?? "10000");
 
                         Console.Write("Type name of file: ");
                         string name = Console.ReadLine();
@@ -91,6 +91,7 @@ namespace IntiveDotNet
                         try
                         {
                             drownItDown.Drown(name, level);
+                            WriteColoredText("File created!", ConsoleColor.Green);
                         }
                         catch (ArgumentOutOfRangeException exception)
                         {

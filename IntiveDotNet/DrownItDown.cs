@@ -65,10 +65,8 @@ namespace IntiveDotNet
 
             for (int i = 0; i < levelsToCut; ++i)
             {
-                path = path.Substring(0, path.LastIndexOf('\\'));
+                path = path.Substring(0, path.LastIndexOf(Path.DirectorySeparatorChar));
             }
-
-            Console.WriteLine(path);
 
             return path;
         }
