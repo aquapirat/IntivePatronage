@@ -12,6 +12,8 @@ namespace IntiveDotNet
     {
         private readonly DeepDive _deepDive;
 
+        public string FilePath { get; private set; }
+
         /// <summary>
         /// Default constructor.
         /// </summary>
@@ -50,7 +52,8 @@ namespace IntiveDotNet
 
             try
             {
-                File.Create(Path.Combine(actualCutPath, fileName));
+                FilePath = Path.Combine(actualCutPath, fileName);
+                File.Create(FilePath);
             }
             catch (UnauthorizedAccessException)
             {

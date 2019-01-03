@@ -59,6 +59,7 @@
     <Compile Include="FizzBuzzTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DeepDiveTests.cs" />
+    <Compile Include="DrownItDownTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

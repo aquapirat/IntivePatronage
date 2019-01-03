@@ -4,10 +4,6 @@ using System.Runtime.CompilerServices;
 
 namespace IntiveDotNet
 {
-    /// <summary>
-    /// TODO: DrownItDown unit tests.
-    /// TODO: Finish up DrownItDown.
-    /// </summary>
     public class Program
     {
         /// <summary>
