@@ -52,7 +52,7 @@ namespace IntiveDotNet
                         {
                             result = FizzBuzz(Int32.Parse(Console.ReadLine() ?? "-1"));
                         }
-                        catch (ArgumentException exception)
+                        catch (Exception exception)
                         {
                             WriteColoredText(exception.Message, ConsoleColor.Red);
                         }
@@ -69,7 +69,7 @@ namespace IntiveDotNet
                             deepDive.Create((ushort) Int16.Parse(Console.ReadLine() ?? "10000"));
                             WriteColoredText("Directories created! You can use DrownItDown now.", ConsoleColor.Green);
                         }
-                        catch (ArgumentException exception)
+                        catch (Exception exception)
                         {
                             WriteColoredText(exception.Message, ConsoleColor.Red);
                         }
@@ -89,11 +89,7 @@ namespace IntiveDotNet
                             drownItDown.Drown(name, level);
                             WriteColoredText("File created!", ConsoleColor.Green);
                         }
-                        catch (ArgumentOutOfRangeException exception)
-                        {
-                            WriteColoredText(exception.Message, ConsoleColor.Red);
-                        }
-                        catch (ArgumentException exception)
+                        catch (Exception exception)
                         {
                             WriteColoredText(exception.Message, ConsoleColor.Red);
                         }
